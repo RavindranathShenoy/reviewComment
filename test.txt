@@ -1,29 +1,70 @@
-abcabcabc
-abcabcabc
-abcabcabc
+## Description
 
+Supplier Service based on [Nest](https://github.com/nestjs/nest) framework TypeScript.
 
-abcabcabc
-abcabcabcabcabcabc
-abcabcabc
-abcabcabc
-abcabcabc
-abcabcabcabcabcabc
-abcabcabc
-abcabcabc
-abcabcabc
-abcabcabc
-abcabcabcabcabcabc
-abcabcabc
-abcabcabc
-abcabcabc
-abcabcabc
-abcabcabcabcabcabc
-abcabcabc
+## Installation
 
-abcabcabc
-abcabcabc
-abcabcabc
+In order to run locally with sqlite you will need to run the below command to build sqlite dependencies.
 
-new
-new
+```bash
+$ yarn install
+```
+
+## Running the app
+
+```bash
+# development (sqlite)
+$ yarn start
+
+# development (sqlite) - watch mode
+$ yarn start-dev
+
+# development (hana)
+$ npm start-hana
+
+# development (hana) - watch mode
+$ npm start-hana-dev
+
+# production mode
+$ yarn start-prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ yarn test
+
+# e2e tests
+$ yarn test:e2e
+
+# test coverage
+$ yarn test:cov
+```
+
+## TypeORM Migrations
+
+```bash
+# Generate migration
+yarn generate-migration NAME
+yarn run-migration
+```
+
+## ESLint
+
+Execute and apply ESLint rules in the code.
+
+```bash
+yarn lint
+```
+
+## Setup local environment
+
+### BTP Destinations
+
+1. Access the `ppbr-supplier-service` application in the `dev` space
+1. Select the `Environment Variables` option
+1. Copy the `System-Provided` configuration related to the `destination` for the `VCAP_SERVICES` option
+1. Paste the content into the `default-env.json` file
+
+WARNING: The `default-env.json` should never be committed with these credentials.
